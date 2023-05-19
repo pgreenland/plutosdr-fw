@@ -4,12 +4,12 @@
 	branch = pluto
 [submodule "buildroot"]
 	path = buildroot
-	url = https://github.com/analogdevicesinc/buildroot.git
+	url = ../plutosdr-buildroot.git
 [submodule "linux"]
 	path = linux
 	url = https://github.com/analogdevicesinc/linux
 	branch = 2018_R1
 [submodule "hdl"]
 	path = hdl
-	url = https://github.com/analogdevicesinc/hdl
+	url = ../plutosdr-hdl
 	branch = hdl_2018_r1
