@@ -156,8 +156,15 @@
 		};
 
 		config@9 { /* This one is actually RevB */
-			description = "Linux with fpga RevB";
-			fdt = "fdt@2";
+			/*
+			** uboot executes command adi_hwref, which reads a voltage divider connected to VP_0.
+			** It converts the voltage read to an index, setting the uboot variable fit_config
+			** Which is used to selected the device tree in use.
+			** The revisionC board, which pluto plus extends, claims to present 0.8v on the analog line, produced by a 4k7 resistor to 1v8 and parallel 20k and 4k7 to ground.
+			** The plutoplus has this divider, but has a 4k7 to 1v8 and another to gnd, resulting in 0.9v which in turn results in it appearing as a rev b.
+			*/
+			description = "Linux with fpga RevC";
+			fdt = "fdt@3";
 			kernel = "linux_kernel@1";
 			ramdisk = "ramdisk@1";
 			fpga = "fpga@1";
