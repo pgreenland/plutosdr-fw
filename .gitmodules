@@ -7,7 +7,7 @@
 	url = ../plutosdr-buildroot.git
 [submodule "linux"]
 	path = linux
-	url = https://github.com/analogdevicesinc/linux
+	url = ../plutosdr-linux.git
 	branch = 2018_R1
 [submodule "hdl"]
 	path = hdl
